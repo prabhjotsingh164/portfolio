@@ -1,0 +1,518 @@
+html
+{
+  scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#add8e6;
+  }
+
+  
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    margin-bottom: 1em;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background:yellowgreen;
+  }
+  
+  .main {
+     
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  .main_container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .image
+  {
+    width: 15em;
+    height: 20em;
+
+
+  }
+
+  #myBtn{
+      background-color:black ;
+      color: white;
+      padding:0.5em;
+  }
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    animation-name: animatetop;
+  animation-duration: 0.4s
+  }
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .skills_container{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 1em;
+
+  }
+  .frontendimage{
+    border-radius: 50%;
+    width:10em ;
+  }
+  .backendimage{
+    border-radius: 50%;
+    width:5em;
+    
+  }
+  .skills_title{
+    text-align: center;
+    background-color:skyblue;
+    border-radius: 1em;
+    box-shadow: 5px 10px palevioletred;
+
+  }
+  .image_container{
+    text-align: center;
+  }
+  .frontend{
+background-color:lightgrey;
+border-radius: 1em;
+width: 10em;
+padding: 1em;
+box-shadow: 5px 10px #888888;
+
+
+  }
+  .backend{
+    background-color: lightgrey;
+    border-radius: 1em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 10px #888888;
+  }
+
+  .others{
+    background-color: lightgrey;
+    border-radius: 1em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 10px #888888;
+  }
+
+  /* Slideshow container */
+.portfolio_container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  
+  width: auto;
+  padding: 16px;
+  
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color:black;
+  font-size: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+  
+}
+.text > a
+{
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  padding:0.5em;
+  box-shadow: 5px 5px palevioletred;
+  text-decoration: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+#form_container{
+  text-align: center;
+  background-color: #252934;
+
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+#name, #email, #message
+{
+  background-color: #1e242c;
+  padding: 0.5em;
+}
+.submit{
+  color: white;
+  border: 2px solid white;
+  background-color: #252934;
+  margin-bottom: 1em;
+}
+.ques{
+  color: #04c1c8;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+
+/* @media screen and (max-width: 1564px) {
+  .resume{
+    
+    grid-template-columns: 1fr 1fr;
+    
+    
+      }
+  
+} */
+  
+@media screen and (max-width: 1310px) {
+  .skills_container{
+    
+    grid-template-columns: 1fr 1fr;
+    
+    
+      }
+  
+}
+@media screen and (max-width: 1196px) {
+  .main_container{
+    
+   display: block;
+    
+    
+      }
+  
+}  
+
+
+@media screen and (max-width: 915px) {
+  .skills_container{
+    
+    grid-template-columns: 1fr;
+    
+    
+      }
+  
+}  
+
+@media screen and (max-width: 745px) {
+  .detail{
+    display: none;
+  }
+  
+}  
+
+@media screen and (max-width: 630px) {
+  .name_title{
+    font-size: 1em;
+  }
+  .description{
+    font-size:1em;
+  }
+  
+}  
+
+
+
+
+@media screen and (max-width: 605px) {
+  .image{
+    width:12.5em;
+    height:17.5em;
+  }
+  .logoimage{
+    width:12.5em;
+  }
+  
+}  
+
+@media screen and (max-width: 572px) {
+  
+  .ques{
+    font-size:0.75em;
+  }
+  
+}  
+
+
+
+
+@media screen and (max-width: 540px) {
+  .image{
+    width:10em;
+    height:15em;
+  }
+  .logoimage{
+    width:10em;
+  }
+  .frontend{
+    width: 8em;
+
+  }
+  .backend{
+    width: 8em;
+
+  }
+  .others{
+    width: 8em;
+  }
+  .frontendimage
+  {
+    width: 8em;
+
+  }
+  ul li{
+    font-size: 0.75em;
+  }
+  .sidenav{
+    width:145px;
+
+  }
+  .main{
+    margin-left:145px ;
+
+  }
+}
+
+@media screen and (max-width: 475px) {
+  
+  .frontend{
+    width: 7em;
+
+  }
+  .backend{
+    width: 7em;
+
+  }
+  .others{
+    width: 7em;
+  }
+  .frontendimage
+  {
+    width: 7em;
+
+  }
+  ul li{
+    font-size: 0.5em;
+  }
+  .sidenav{
+    width:135px;
+
+  }
+  .main{
+    margin-left:135px ;
+
+  }
+  .description{
+    font-size: 0.75em;
+  }
+  
+}  
+
+
+
+
+  
+  @media screen and (max-width: 450px) {
+    .sidenav {
+      padding-top: 15px;
+      width: 115px;
+    }
+    .main{
+      margin-left:115px ;
+  
+    }
+    .sidenav a {font-size: 18px;}
+    
+    .image{
+      width:8.5em;
+      height:12.5em;
+    }
+    .logoimage{
+      width:8.5em;
+    }
+    .ques{
+      font-size: 0.5em;
+    }
+
+
+
+  }
+  @media screen and (max-width: 400px) {
+    .sidenav {
+      
+      width: 105px;
+    }
+    .main{
+      margin-left:100px ;
+  
+    }
+    .frontend{
+      width: 5em;
+  
+    }
+    .backend{
+      width: 5em;
+  
+    }
+    .others{
+      width: 5em;
+    }
+    .frontendimage
+    {
+      width: 5em;
+  
+    }
+    #message{
+      width:10em;
+    }
+    .skills_title > h1{
+font-size: 1em;
+    }
+
+
+
+
+
+    
+  }
+  @media screen and (max-width: 362px) {
+    .image{
+      width:7em;
+      height:9em;
+    }
+    .logoimage{
+      width:7em;
+    }
+    .aboutme {
+      margin-left: -1.5em;
+    }
+    .main{
+      margin-left:95px ;
+  
+    }
+    .slist{
+      margin-left:-1em ;
+    }
+      
+  }
+
+  @media screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
+  
